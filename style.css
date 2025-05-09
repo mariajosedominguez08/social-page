@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #fff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+  padding: 40px 32px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.accounts {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.accounts h1 {
+  color: #2563eb;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.accounts h2 {
+  font-size: 1.2rem;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.accounts h3 {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.account-dual {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 10px;
+  padding: 12px 8px;
+}
+
+.account:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+  background: #f3f4f6;
+}
+
+.account img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border: 2px solid #e5e7eb;
+  background: #e5e7eb;
+}
+
+.account h2 {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+button[type="submit"] {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #1e40af;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 6px 0;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+form p {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+form p span {
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+form p span:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 8px;
+    max-width: 98vw;
+  }
+  .account-dual {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
